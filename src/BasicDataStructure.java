@@ -34,13 +34,13 @@ public class BasicDataStructure {
 		myQueue.add("Hello");
 		myQueue.add("World");
 		myNumbers.add(1);
-		myNumbers.add(2);		
+		myNumbers.add(2);				
 		
 		Hashtable<String, Integer> ht = new Hashtable<String, Integer>();
 		ht.put("Nemo Wang",9527);
 		ht.put("Susan", 7084);
 		System.out.println("output of Hashtable<String, Integer>");
-		System.out.println("hashtable value of Susan is: "+ht.get("Susan"));
+		System.out.println("hashtable value of Xiang is: "+ht.get("Xiang"));
 		
 	}
 	
