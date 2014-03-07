@@ -77,6 +77,8 @@ public class BST_Test {
 	}
 	
 	
+	//print a BT
+	
 	
 	
 	
