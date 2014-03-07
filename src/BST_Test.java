@@ -6,6 +6,9 @@ public class BST_Test {
 		Node n = lowestCommonAncestor(generateNode(), new Node(20), new Node(80));
 		System.out.println("the common ancestor of BST is "+(n== null?"not available":n.val));
 		
+		Boolean isBalanced = isBalanced(generateNode());
+		System.out.println("isBalanced = " + isBalanced);
+		
 		boolean isBST = isBST(generateNode());
 		System.out.println("isBST " + isBST);
 		
@@ -39,6 +42,26 @@ public class BST_Test {
 	        // the nodes are on separate branches
 	        return root;
 	    }
+	}
+	
+	//check if a BT is balanced
+	public static Boolean isBalanced(Node n){
+		return getHeight(n) != -1;
+	}	
+	
+	public static int getHeight(Node n){
+		
+		if(n == null) return 0;
+		
+		int hLeft = getHeight(n.left);
+		if(hLeft == -1) return -1;
+		
+		int hRight = getHeight(n.right);
+		if(hRight == -1) return -1;
+		
+		if(Math.abs(hLeft - hRight) > 1) return -1;
+		
+		return Math.max(hLeft, hRight) + 1;
 	}
 	
 	//check if a BT is a BST: cc4.5
