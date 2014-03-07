@@ -38,7 +38,7 @@ public class BasicDataStructure {
 		
 		Hashtable<String, Integer> ht = new Hashtable<String, Integer>();
 		ht.put("Nemo Wang",9527);
-		ht.put("Susan", 7084);
+		ht.put("Xiang", 7084);
 		System.out.println("output of Hashtable<String, Integer>");
 		System.out.println("hashtable value of Xiang is: "+ht.get("Xiang"));
 		
