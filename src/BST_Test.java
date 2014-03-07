@@ -2,7 +2,9 @@
 public class BST_Test {
 
 	public static void main(String [] args){
-
+		
+		printBT(generateNode(), "pre-order");
+		
 		Node n = lowestCommonAncestor(generateNode(), new Node(20), new Node(80));
 		System.out.println("the common ancestor of BST is "+(n== null?"not available":n.val));
 		
@@ -78,7 +80,32 @@ public class BST_Test {
 	
 	
 	//print a BT
-	
+	public static void printBT(Node n, String order){
+		if(n == null) return;
+		switch(order.toLowerCase()){
+			case "pre-order":
+				System.out.print(String.format("%1$"+5+ "s", n.val));
+				printBT(n.left, order);
+				printBT(n.right, order);
+				System.out.println();
+				break;
+			case "in-order":
+				printBT(n.left, order);
+				System.out.print(String.format("%1$"+5+ "s", n.val));
+				printBT(n.right, order);
+				System.out.println();
+				break;
+			case "post-order":
+				printBT(n.left, order);
+				printBT(n.right, order);
+				System.out.print(String.format("%1$"+5+ "s", n.val));
+				System.out.println();
+				break;
+			default:
+				System.out.println("wrong order parameter...");
+				break;
+		}
+	}
 	
 	
 	
