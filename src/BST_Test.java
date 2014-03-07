@@ -44,7 +44,7 @@ public class BST_Test {
 	    }
 	}
 	
-	//check if a BT is balanced
+	//check if a BT is balanced: cc4.1
 	public static Boolean isBalanced(Node n){
 		return getHeight(n) != -1;
 	}	
