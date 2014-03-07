@@ -19,7 +19,7 @@ public class BST_Test {
 		root.left.left = new Node(20);
 		root.left.right = new Node(40);
 		root.right.left = new Node(60);
-		root.right.right = new Node(80);	
+		root.right.right = new Node(88);	
 		return root;
 	}
 	
