@@ -4,9 +4,11 @@ import java.util.*;
 public class LongestWord {
 	public static void main(String [] args)throws IOException {
 		
-		String file_name = "C:/Users/yixiang/Desktop/Aspera/wordsforproblem.txt";		
+		//put your file path here
+		String file_path = "C:/Users/yixiang/Desktop/Aspera/wordsforproblem.txt";	
+		
 	    List<String> temps = new LinkedList<String>();
-	    Scanner scan = new Scanner(new File(file_name));
+	    Scanner scan = new Scanner(new File(file_path));
 	    while (scan.hasNext()) {
 	      temps.add(scan.next());
 	    }
